@@ -1,11 +1,13 @@
-import logo from "../assets/images/Color logo with background.svg";
+import { Logo } from "../components";
 import mainImage from "../assets/images/main.svg";
+import Wrapper from "../assets/wrappers/LandingPage";
+import { Link } from "react-router-dom";
 
 const Landing = () => {
   return (
-    <main>
+    <Wrapper>
       <nav>
-        <img src={logo} alt="Joby" className="logo" />
+        <Logo />
       </nav>
       <div className="container page"></div>
       {/* info */}
@@ -20,10 +22,12 @@ const Landing = () => {
           cupping yr air plant shaman narwhal same. VHS cardigan squid, occupy
           street art venmo austin four dollar toast umami adaptogen.
         </p>
-        <butten className="btn btn-hero">Login/Register</butten>
+        <Link to="/register" className="btn btn-hero">
+          Login/Register
+        </Link>
       </div>
       <img src={mainImage} alt="Job hunt" className="img main-img" />
-    </main>
+    </Wrapper>
   );
 };
 
