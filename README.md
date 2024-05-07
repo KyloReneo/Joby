@@ -1,2 +1,2 @@
 # Joby
-A MERN React &amp; Nodejs web application for finding jobs.
+A MERN web application for finding jobs.
