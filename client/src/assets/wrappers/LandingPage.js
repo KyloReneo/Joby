@@ -12,7 +12,7 @@ const Wrapper = styled.main`
 
   .page {
     min-height: calc(40vh - var(--nav-height));
-    margin-top: -3rem;
+    margin-top: -5rem;
     display: grid;
     align-items: center;
   }
