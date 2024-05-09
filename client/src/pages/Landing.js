@@ -1,5 +1,5 @@
 import { Logo } from "../components";
-import mainImage from "../assets/images/main.svg";
+import img from "../assets/images/main.svg";
 import Wrapper from "../assets/wrappers/LandingPage";
 import { Link } from "react-router-dom";
 
@@ -26,7 +26,7 @@ const Landing = () => {
           Login/Register
         </Link>
       </div>
-      <img src={mainImage} alt="Job hunt" className="img main-img" />
+      <img src={img} alt="Job hunt" className="img main-img" />
     </Wrapper>
   );
 };
