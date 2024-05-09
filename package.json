@@ -2,7 +2,7 @@
   "name": "joby",
   "version": "1.0.0",
   "description": "A MERN web application for finding jobs.",
-  "main": "server.js",
+  "main": "index.js",
   "type": "module",
   "scripts": {
     "start": "nodemon server",
