@@ -1,6 +1,12 @@
+//Import express.js and create the express app
 import express from "express";
 const app = express();
 
+//Read the configs from .env file
+import dotenv from "dotenv";
+dotenv.config();
+
+//Middlewares
 import notFoundMiddleware from "./middleware/NotFound.js";
 import errorHandlerMiddleware from "./middleware/ErrorHandler.js";
 
