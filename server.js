@@ -14,6 +14,7 @@ const MongoUri = `mongodb+srv://${MongoUsername}:${MongoPassword}@cluster0.mcbns
 
 // Routers
 import authRouter from "./routes/authRoutes.js";
+import jobsRouter from "./routes/jobsRoutes.js";
 
 // Middlewares
 import notFoundMiddleware from "./middleware/NotFound.js";
@@ -27,6 +28,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/v1/auth", authRouter);
+app.use("/api/v1/jobs", jobsRouter);
 
 app.use(notFoundMiddleware);
 app.use(errorHandlerMiddleware);
