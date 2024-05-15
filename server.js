@@ -6,6 +6,9 @@ const app = express();
 import dotenv from "dotenv";
 dotenv.config();
 
+// Try/Catch handling
+import "express-async-errors";
+
 // Make db connection
 import connectToDB from "./db/connect.js";
 
