@@ -4,14 +4,27 @@ import { StatusCodes } from "http-status-codes";
 class CustomeAPIError extends Error {
   constructor(message) {
     super(message);
+  }
+}
+
+class BadRequestError extends CustomeAPIError {
+  constructor(message) {
+    super(message);
     this.statusCode = StatusCodes.BAD_REQUEST;
   }
 }
 
-const register = async (req, res, next) => {
+class NotFoundError extends CustomeAPIError {
+  constructor(message) {
+    super(message);
+    this.statusCode = StatusCodes.NOT_FOUND;
+  }
+}
+
+const register = async (req, res) => {
   const { name, email, password } = req.body;
   if (!name || !email || !password) {
-    throw new CustomeAPIError("Please provide all values");
+    throw new BadRequestError("Please provide all values");
   }
   const user = await User.create({ name, email, password });
   res.status(StatusCodes.CREATED).json({ user });
