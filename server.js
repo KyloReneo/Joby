@@ -19,13 +19,16 @@ import jobsRouter from "./routes/jobsRoutes.js";
 // Middlewares
 import notFoundMiddleware from "./middleware/NotFound.js";
 import errorHandlerMiddleware from "./middleware/ErrorHandler.js";
-import mongoose from "mongoose";
 
 // Built-in express middleware for parsing json
 app.use(express.json());
 
 app.get("/", (req, res) => {
   res.send("init");
+});
+
+app.get("/api/v1", (req, res) => {
+  res.json({ msg: "API connected..." });
 });
 
 app.use("/api/v1/auth", authRouter);
